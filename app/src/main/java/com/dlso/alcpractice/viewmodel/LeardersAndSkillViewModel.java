@@ -76,11 +76,11 @@ public class LeardersAndSkillViewModel extends ViewModel {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        Json api = retrofit.create(Json.class);
-        Call<List<SkillLeadersModel>> callSchedule = api.getSkillLeadersDetails();
-        callSchedule.enqueue(new Callback<List<SkillLeadersModel>>() {
-            @Override
-            public void onResponse(@NonNull Call<List<SkillLeadersModel>> call, @NonNull Response<List<SkillLeadersModel>> response) {
+               Json api = retrofit.create(Json.class);
+               Call<List<SkillLeadersModel>> callSchedule = api.getSkillLeadersDetails();
+               callSchedule.enqueue(new Callback<List<SkillLeadersModel>>() {
+              @Override
+             public void onResponse(@NonNull Call<List<SkillLeadersModel>> call, @NonNull Response<List<SkillLeadersModel>> response) {
                 skillLeaders.setValue(response.body());
             }
             @Override

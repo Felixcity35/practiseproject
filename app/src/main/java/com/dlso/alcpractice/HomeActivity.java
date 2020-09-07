@@ -1,5 +1,6 @@
 package com.dlso.alcpractice;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -34,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, "submit click", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(),SubmitActivity.class));
             }
         });
 
